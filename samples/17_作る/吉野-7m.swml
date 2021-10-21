@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE swml SYSTEM "http://www.signpuddle.com/swml/swml-s.dtd">
+<swml dialect="S" version="1.1" lang="sgn" glosslang="" 
+  signboxWidth="150" signboxHeight="150" writingDirection="vertical" lineSpace="20" signSpace="40">
+  <sign lane="0">
+    <gloss />
+      <symbol x="47" y="55">01-10-015-01-02-01</symbol>
+      <symbol x="46" y="79">01-10-015-01-02-09</symbol>
+      <symbol x="64" y="69">02-01-008-01-02-01</symbol>
+  </sign>
+  <sign lane="0">
+    <gloss>NEWLINE</gloss>
+  </sign>
+</swml>

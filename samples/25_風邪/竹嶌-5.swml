@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE swml SYSTEM "http://www.signpuddle.com/swml/swml-s.dtd">
+<swml dialect="S" version="1.1" lang="sgn" glosslang="">
+  <sign lane="0">
+    <gloss />
+    <symbol x="56" y="9">04-02-002-03-01-01</symbol>
+    <symbol x="69" y="29">04-04-004-01-02-01</symbol>
+    <symbol x="98" y="48">01-10-015-01-02-01</symbol>
+    <symbol x="89" y="36">02-01-001-01-01-01</symbol>
+    <symbol x="125" y="34">02-03-001-02-01-06</symbol>
+    <symbol x="114" y="43">02-03-001-02-01-06</symbol>
+  </sign>
+</swml>

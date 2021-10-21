@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE swml SYSTEM "http://www.signpuddle.com/swml/swml-s.dtd">
+<swml dialect="S" version="1.1" lang="sgn" glosslang="">
+  <sign lane="0">
+    <gloss />
+    <symbol x="32" y="30">01-09-018-01-01-02</symbol>
+    <symbol x="59" y="59">02-03-001-03-01-06</symbol>
+    <symbol x="89" y="99">01-09-018-01-04-03</symbol>
+    <symbol x="42" y="49">05-01-001-01-01-01</symbol>
+  </sign>
+  <sign lane="0">
+    <gloss>NEWLINE</gloss>
+  </sign>
+</swml>
