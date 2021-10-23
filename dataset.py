@@ -84,7 +84,7 @@ class SWDataset(Dataset):
     """Dataset for SW sign classification
     """
  
-    def __init__(self, sample_dir, use_swdic_data=True):
+    def __init__(self, sample_dir, use_swdic_data=True, use_swdict_all_entries=False):
         """get data from transcription samples
         """
         #self.transform = transformer
@@ -127,10 +127,17 @@ class SWDataset(Dataset):
         if use_swdic_data:
             # Read signs from swdcit
             swdict = SwDict()
-            for signid in self.label_vocab.keys():
-                sign = swdict.search_by_id(signid)
-                data = Transcript(sign=sign, labels=[signid])
-                self.transcripts.append(data)
+            if not use_swdict_all_entries:
+                # use 30 entries
+                for signid in self.label_vocab.keys():
+                    sign = swdict.search_by_id(signid)
+                    data = Transcript(sign=sign, labels=[signid])
+                    self.transcripts.append(data)
+            else:
+                # use all entries
+                for signid,sign in swdict.signs.items():
+                    data = Transcript(sign=sign, labels=[signid])
+                    self.transcripts.append(data)
 
 
     def __len__(self):
