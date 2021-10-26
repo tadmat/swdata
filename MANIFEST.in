@@ -1,0 +1,3 @@
+include swdata/samples/*/*.swml
+include swdata/samples/*.txt
+include swdata/weights/*.pt
