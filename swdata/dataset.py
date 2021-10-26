@@ -23,7 +23,9 @@ class Transcript:
     sign: swdict.Sign
     labels: list    # target labels (sign ids in swdic.db)
 
-
+max_nhands = 0
+max_nheads = 0
+max_nmoves = 0
 
 def sign2tensor(sign: swdict.Sign):
     """convert Sign into tensor
@@ -34,6 +36,10 @@ def sign2tensor(sign: swdict.Sign):
     headfacebodies = []
     movements = []
 
+    global max_nhands
+    global max_nheads
+    global max_nmoves
+
     for sym in sign.symbols:
         if sym.category == 1:
             hands.append([sym.id, sym.x, sym.y])
@@ -42,18 +48,38 @@ def sign2tensor(sign: swdict.Sign):
         else:
             movements.append([sym.id, sym.x, sym.y])
 
+    if len(hands) > max_nheads:
+        max_nheads = len(hands)
+        print("## nhands updated to", len(hands))
+    if len(headfacebodies) > max_nheads:
+        max_nheads = len(headfacebodies)
+        print("## nheads updated to", len(headfacebodies))
+    if len(movements) > max_nmoves:
+        max_nmoves = len(movements)
+        print("## nmoves updated to", len(movements))
+
     # max number of hand and head_face_body symbols
-    max_handhead_symbols = 4
-    for lst in (hands, headfacebodies):
-        if len(lst) > max_handhead_symbols:
-            print("@@@ number of symbols:", len(lst))
-            print("@@@", lst)
-            while len(lst) > max_handhead_symbols:
-                lst.pop()
-        else:
-            # fill PAD
-            for _ in range(max_handhead_symbols - len(lst)):
-                lst.append([pad_id, 0, 0])
+    max_hand_symbols = 4
+    if len(hands) > max_hand_symbols:
+        print("@@@ number of hand symbols:", len(hands))
+        print("@@@", hands)
+        while len(hands) > max_hand_symbols:
+            hands.pop()
+    else:
+        # fill PAD
+        for _ in range(max_hand_symbols - len(hands)):
+            hands.append([pad_id, 0, 0])
+    max_headfacebody_symbols = 4
+    if len(headfacebodies) > max_headfacebody_symbols:
+        print("@@@ number of headface_body symbols:", len(headfacebodies))
+        print("@@@", headfacebodies)
+        while len(headfacebodies) > max_headfacebody_symbols:
+            headfacebodies.pop()
+    else:
+        # fill PAD
+        for _ in range(max_headfacebody_symbols - len(headfacebodies)):
+            headfacebodies.append([pad_id, 0, 0])
+
 
     # max number of movement symbols
     max_movement_symbols = 8
