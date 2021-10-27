@@ -3,6 +3,7 @@ from .dataset import (
     LabelStruct,
     Transcript,
     sign2tensor,
+    print_max_nsymbols,
 )
 
 __all__ = [
@@ -10,6 +11,7 @@ __all__ = [
     "LabelStruct",
     "Transcript",
     "sign2tensor",
+    "print_max_nsymbols",
 ]
 
 __version__ = '0.1.0'

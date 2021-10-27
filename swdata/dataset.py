@@ -27,6 +27,18 @@ max_nhands = 0
 max_nheads = 0
 max_nmoves = 0
 
+def print_max_nsymbols():
+    '''Print max number of symbols in a sign'''
+    global max_nhands
+    global max_nheads
+    global max_nmoves
+
+    print('*** max number of symbols in a sign:')
+    print('*** hands:', max_nhands)
+    print('*** heads:', max_nheads)
+    print('*** moves:', max_nmoves)
+
+
 def sign2tensor(sign: swdict.Sign):
     """convert Sign into tensor
     """
