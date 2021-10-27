@@ -189,6 +189,7 @@ class SWDataset(Dataset):
                     if signid not in self.label_vocab:
                         self.label_vocab[signid] = self.vocab_idx
                         self.vocab_idx += 1
+                print_max_nsymbols()
 
 
     def __len__(self):
