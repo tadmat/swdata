@@ -215,7 +215,7 @@ class SWDataset(Dataset):
 
 
 def main():
-    dataset = SWDataset(sample_dir="./samples")
+    dataset = SWDataset(sample_dir="../classifying_swsigns/okadata/train")
     print('length:', len(dataset))
     sign = dataset[0]
 
