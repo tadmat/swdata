@@ -68,19 +68,19 @@ def sign2tensor(sign: swdict.Sign):
 
     if len(hands) > max_nheads:
         max_nheads = len(hands)
-        print("## nhands updated to", len(hands))
+        #print("## nhands updated to", len(hands))
     if len(headfacebodies) > max_nheads:
         max_nheads = len(headfacebodies)
-        print("## nheads updated to", len(headfacebodies))
+        #print("## nheads updated to", len(headfacebodies))
     if len(movements) > max_nmoves:
         max_nmoves = len(movements)
-        print("## nmoves updated to", len(movements))
+        #print("## nmoves updated to", len(movements))
 
     # max number of hand and head_face_body symbols
     max_hand_symbols = 4
     if len(hands) > max_hand_symbols:
-        print("@@@ number of hand symbols:", len(hands))
-        print("@@@", hands)
+        #print("@@@ number of hand symbols:", len(hands))
+        #print("@@@", hands)
         while len(hands) > max_hand_symbols:
             hands.pop()
     else:
@@ -89,8 +89,8 @@ def sign2tensor(sign: swdict.Sign):
             hands.append([pad_id, 0, 0])
     max_headfacebody_symbols = 4
     if len(headfacebodies) > max_headfacebody_symbols:
-        print("@@@ number of headface_body symbols:", len(headfacebodies))
-        print("@@@", headfacebodies)
+        #print("@@@ number of headface_body symbols:", len(headfacebodies))
+        #print("@@@", headfacebodies)
         while len(headfacebodies) > max_headfacebody_symbols:
             headfacebodies.pop()
     else:
@@ -102,8 +102,8 @@ def sign2tensor(sign: swdict.Sign):
     # max number of movement symbols
     max_movement_symbols = 8
     if len(movements) > max_movement_symbols:
-        print("=== number of symbols:", len(movements))
-        print("==", movements)
+        #print("=== number of symbols:", len(movements))
+        #print("==", movements)
         while len(movements) > max_movement_symbols:
             movements.pop()
     else:
