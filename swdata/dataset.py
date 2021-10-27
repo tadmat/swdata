@@ -53,9 +53,12 @@ def sign2tensor(sign: swdict.Sign):
     global max_nmoves
 
     for sym in sign.symbols:
-        if sym.id is None:
+        if sym.category > 5:
+            continue
+        elif sym.id is None :
             print("!!! sym id is None, categori:", sym.category)
             continue
+        
         if sym.category == 1:
             hands.append([sym.id, sym.x, sym.y])
         elif sym.category == 4 or sym.category == 5:
