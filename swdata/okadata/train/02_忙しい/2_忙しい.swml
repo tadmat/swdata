@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE swml SYSTEM "http://www.signpuddle.com/swml/swml-s.dtd">
+<swml dialect="S" version="1.1" lang="sgn" glosslang="">
+  <sign lane="0">
+    <gloss yomi="いそがしい">忙しい</gloss>
+    <symbol x="81" y="58">02-03-006-01-01-01</symbol>
+    <symbol x="30" y="78">02-03-006-01-02-05</symbol>
+    <symbol x="87" y="83">01-05-015-01-02-15</symbol>
+    <symbol x="34" y="56">01-05-015-01-02-07</symbol>
+  </sign>
+  <sign lane="0">
+    <gloss>NEWLINE</gloss>
+  </sign>
+</swml>

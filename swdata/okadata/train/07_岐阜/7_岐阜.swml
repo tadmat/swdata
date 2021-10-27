@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE swml SYSTEM "http://www.signpuddle.com/swml/swml-s.dtd">
+<swml dialect="S" version="1.1" lang="sgn" glosslang="">
+  <sign lane="0">
+    <gloss yomi="ぎふ">岐阜</gloss>
+    <symbol x="57" y="56">04-01-001-01-01-01</symbol>
+    <symbol x="48" y="79">01-03-034-01-03-01</symbol>
+    <symbol x="26" y="68">02-02-008-01-02-05</symbol>
+  </sign>
+  <sign lane="0">
+    <gloss>NEWLINE</gloss>
+  </sign>
+</swml>

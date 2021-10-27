@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE swml SYSTEM "http://www.signpuddle.com/swml/swml-s.dtd">
+<swml dialect="S" version="1.1" lang="sgn" glosslang="">
+  <sign lane="0">
+    <gloss yomi="しんけい">神経</gloss>
+    <symbol x="61" y="43">01-10-015-01-06-10</symbol>
+    <symbol x="47" y="58">05-02-001-01-01-08</symbol>
+    <symbol x="50" y="69">02-05-012-01-01-05</symbol>
+    <symbol x="73" y="82">01-01-001-01-06-02</symbol>
+  </sign>
+  <sign lane="0">
+    <gloss>NEWLINE</gloss>
+  </sign>
+</swml>
